@@ -4,7 +4,18 @@ import './index.css';
 import Week from './Week';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Week />, document.getElementById('root'));
+var date = new Date();
+let days = ["Sun", 'Mon', "Tue", "Wed", "Thur", "Fri", "Sat"].map((day, i) => ({ day, dayCode: i }));
+
+while(true){
+  const elm = days[0];
+  if (elm.dayCode === date.getDay()){
+     elm.type="today";
+     break;
+   }
+  days.push(days.shift());
+}
+ReactDOM.render(<Week days={days}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
