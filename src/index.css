@@ -4,7 +4,31 @@ html body{
   font-family: "Courier New", Courier, monospace;
 
 }
+#upperContainer{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid lime; */
+}
+#today{
+  text-decoration: none;
+    margin-right: 2.5%;
+    color: lime;
+    opacity: .4;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 4%;
+    font-size: 16px;
+    /* border: 1px solid lime; */
+    height: 0;
+
+}
+#today:hover{
+    color:gray;
+}
 #headline{
+  display: flex;
+  flex-direction: column;
   padding-left: 5%;
   padding-top:2%;
   margin-bottom:2%;
@@ -12,17 +36,20 @@ html body{
   font-size: 18px;
   color:rgb(237, 135, 117);
   /* border: 1px solid lime; */
-
 }
 #tagline{
-  margin-top: -15px;
+  margin-top: -10px;
   font-size: 10px;
   /* text-align: right; */
   color: rgb(244, 204, 197);
   margin-right: 15%;
   padding-bottom: 5px;
 }
-
+#alert{
+  font-size: 10px;
+  color: rgb(236, 82, 55);
+  opacity: .6;
+}
 #week{
   width: 90%;
   /* padding-right: 10%; */
@@ -53,6 +80,10 @@ html body{
   width: 90%;
   padding-top: 10px;
   margin-bottom: 10px;
+}
+.dayContent:hover{
+  opacity: .3;
+  /* background-color: pink; */
 }
 .eventTitle{
   color: orange;
@@ -93,4 +124,27 @@ html body{
 }
 .today:hover{
   border-bottom: 1.5px solid skyblue;
+}
+#input{
+  /* margin-right: 15% */
+  width: inherit;
+  background-color: rgb(44,48,58);
+  font-family: "Courier New", Courier, monospace;
+  padding-top: .5rem;
+  padding-bottom: 5px;
+  color: white;
+  border:0;
+  margin-top: 8px;
+  border-bottom: .1px solid orange;
+  /* border-top:.1px solid skyblue; */
+  outline-color: rgb(44,48,58);;
+  margin-bottom: 10px;
+
+  margin-right: 15%;
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-size:10px;
+  opacity: 0.5; /* Firefox */
 }
