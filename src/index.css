@@ -46,7 +46,7 @@ html body{
   padding-bottom: 5px;
 }
 #alert{
-  font-size: 10px;
+  font-size: 16px;
   color: rgb(236, 82, 55);
   opacity: .6;
 }
@@ -83,6 +83,7 @@ html body{
 }
 .dayContent:hover{
   opacity: .3;
+  cursor: pointer;
   /* background-color: pink; */
 }
 .eventTitle{
@@ -118,6 +119,9 @@ html body{
   padding-bottom: .5%;
   padding-top: 1.5%;
 
+}
+.yesterday{
+  opacity: .3;
 }
 #gray{
   color: gray;

@@ -10,13 +10,17 @@ var date = new Date();
 let days = ["Sun", 'Mon', "Tue", "Wed", "Thur", "Fri", "Sat"].map((day, i) => ({ day, dayCode: i }));
 
 while(true){
+  const yd = days[6];
+
   const elm = days[0];
   if (elm.dayCode === date.getDay()){
      elm.type="today";
+     yd.type = "yesterday";
      break;
    }
   days.push(days.shift());
 }
+
 ReactDOM.render([<Header/>,<Week days={days}/>], document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

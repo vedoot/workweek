@@ -68,8 +68,13 @@ class Day extends React.Component{
     }
 
   render(){
+
+
     this.sortEvents();
     let event = this.props.event;
+    // if(this.props.type==="yesterday"){
+    //   event = [];
+    // }
     let def ={};
     let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} id={this.props.day} className={"title " + this.props.type}>{this.props.day}</p>;
     if (this.state.add){
@@ -140,10 +145,12 @@ sortEvents(){
     //p T F T F
     //q F T T F
     //ans T,F, T, T
-
+var changedA = false;
+var changedB =false;
     if(a.time.includes("PM")||!a.time.includes("AM")){
       if(a.time.substring(0,2)=='12'){
         a.time='00'+a.time.substring(2);
+        changedA=true;
       }
       if(!a.time.includes("PM")){
           a.time = a.time + "PM";
@@ -158,6 +165,8 @@ sortEvents(){
     if(b.time.includes("PM")||!b.time.includes("AM")){
       if(b.time.substring(0,2)=='12'){
         b.time='00'+b.time.substring(2);
+        changedB=true;
+
       }
       if(!b.time.includes("PM")){
         b.time = b.time + "PM";
@@ -171,8 +180,10 @@ sortEvents(){
       t2 = b.time.substring(0,b.time.length-2);
     }
 
-
-
+    if(changedA)
+      a.time = '12'+a.time.substring(2);
+    if(changedB)
+      b.time='12'+b.time.substring(2);
 
     var x = new Date (new Date().toDateString() + ' ' + t1);
     var y = new Date (new Date().toDateString() + ' ' + t2);

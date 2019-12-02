@@ -26,7 +26,7 @@ class Header extends React.Component{
 
   render(){
     return(
-      <div id="upperContainer">
+      <div key={1} id="upperContainer">
       <div id="headline">
         <p>This is what your<br/> week looks like.</p>
         <p id="tagline"> Better get to work</p>
