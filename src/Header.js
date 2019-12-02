@@ -31,8 +31,11 @@ class Header extends React.Component{
         <p>This is what your<br/> week looks like.</p>
         <p id="tagline"> Better get to work</p>
       </div>
+      <div id="linkContainer">
         <a target="_blank" rel="noopener noreferrer" href="http://calendar.google.com/" id="today"> {this.state.date.toString()}</a>
-      </div>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/VMehta99/workweek" id="instructions">Some Instructions</a>
+       </div>
+    </div>
     )
   }
 }

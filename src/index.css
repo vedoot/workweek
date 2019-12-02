@@ -4,17 +4,42 @@ html body{
   font-family: "Courier New", Courier, monospace;
 
 }
-#M{
-  color:gold;
+#M.eventTime{
+  color:rgb(188, 230, 49);
 }
-#H{
-  color:rgb(236, 82, 55);
+#M.eventTitle{
+  color:orange;
 }
-#L{
-  color:skyblue;
+#H.eventTime{
+  color:rgb(244, 204, 197);
+  /* font-weight: 700; */
+}
+#H.eventTitle{
+ color:rgb(255, 115, 91);
+}
+#L.eventTime{
+  color:lightgreen;
+}
+#L.eventTitle{
+  color:rgb(85, 230, 92);
+}
+#B.eventTitle{
+  color: rgb(80, 151, 246)
+}
+#B.eventTime{
+  color:rgb(128, 127, 240);
+}
+#PARTY{
+  -webkit-animation: color-change 7s infinite;
+   -moz-animation: color-change 7s infinite;
+   -o-animation: color-change 7s infinite;
+   -ms-animation: color-change 7s infinite;
+   animation: color-change 7s infinite;
 }
 #upperContainer{
-  width: 95%;
+  width: inherit;
+  padding-left:3.5%;
+  padding-right: 2.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,7 +63,7 @@ html body{
 #headline{
   display: flex;
   flex-direction: column;
-  padding-left: 5%;
+  /* padding-left: 5%; */
   padding-top:2%;
   margin-bottom:2%;
   font-family: "Courier New", Courier, monospace;
@@ -55,24 +80,27 @@ html body{
   padding-bottom: 5px;
 }
 #alert{
-  font-size: 16px;
-  color: rgb(236, 82, 55);
-  opacity: .6;
+  font-size: 14px;
+  color: rgb(205, 59, 82);
+  /* opacity: .6; */
 }
 #week{
-  width: 90%;
+  /* width: inherit; */
+  width: inherit;
   /* padding-right: 10%; */
   padding-bottom: 10%;
-  padding-left:5%;
+  padding-left:3.5%;
+  padding-right: 2.5%;
   font-family: "Courier New", Courier, monospace;
   /* border: 1px solid white; */
   color: white;
   display: flex;
   flex-direction:row;
   justify-content: space-around;
+  /* border: 1px solid lime; */
 }
 .day{
-  width: inherit;
+  width: 90%;
 }
 .title{
   border-bottom: .1px solid rgb(72, 73, 77);
@@ -84,11 +112,11 @@ html body{
   border-bottom: 1.5px solid orange;
 }
 .dayContent{
-  /* border-left: .1px solid gray; */
   /* padding-left: 10px; */
   width: 90%;
   padding-top: 10px;
   margin-bottom: 10px;
+  /* border: 1px solid orange; */
 }
 .dayContent:hover{
   opacity: .3;
@@ -100,7 +128,8 @@ html body{
   font-size: 15px;
 }
 .eventTime{
-  color: lime ;
+  color: lime;
+  opacity: .8;
   font-size: 10px;
   margin-left: 10px;
   padding-left: 10px;
@@ -108,6 +137,8 @@ html body{
   padding-bottom:5px;
   border-left: .1px solid gray;
 }
+
+
 .eventDesc{
   color: lightgray !important;
   font-size: 13px;
@@ -121,7 +152,6 @@ html body{
   font-size: 10px;
   background-color:rgb(33, 33, 32);
   color: gray;
-
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -129,11 +159,38 @@ html body{
   padding-top: 1.5%;
 
 }
+#instructions{
+  font-size: 9px;
+  color: gray;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  margin-right: 3.5%;
+}
+#instructions:hover{
+  color: lightgray;
+}
+#linkContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  /* border: 1px solid lime; */
+  width: 50%;
+  align-items: flex-end;
+}
 .yesterday{
-  opacity: .3;
+  /* opacity: .3; */
 }
 #gray{
   color: gray !important;
+  /* opacity: .7; */
+}
+#G{
+  color: gray !important;
+}
+#finished{
+  /* color: orange !important; */
+  font-size: 5%;
+  opacity:.5;
 }
 .today:hover{
   border-bottom: 1.5px solid skyblue;
@@ -152,7 +209,6 @@ html body{
   /* border-top:.1px solid skyblue; */
   outline-color: rgb(44,48,58);;
   margin-bottom: 10px;
-
   margin-right: 15%;
 
 }
@@ -161,4 +217,49 @@ html body{
   overflow-x: scroll;
   font-size:10px;
   opacity: 0.5; /* Firefox */
+}
+@-webkit-keyframes color-change {
+  0% { color:rgb(244, 204, 197); }
+  20%{color:rgb(255, 115, 91);}
+  40%{color:orange;}
+  60%{color:rgb(85, 230, 92)}
+  80% {color: rgb(80, 151, 246) }
+  90% { color:rgb(128, 127, 240) }
+  100%{ color:rgb(244, 204, 197); }
+}
+@-moz-keyframes color-change {
+  0% { color:rgb(244, 204, 197); }
+  20%{color:rgb(255, 115, 91);}
+  40%{color:orange;}
+  60%{color:rgb(85, 230, 92)}
+  80% {color: rgb(80, 151, 246) }
+  90% { color:rgb(128, 127, 240) }
+  100%{ color:rgb(244, 204, 197); }
+}
+@-ms-keyframes color-change {
+  0% { color:rgb(244, 204, 197); }
+  20%{color:rgb(255, 115, 91);}
+  40%{color:orange;}
+  60%{color:rgb(85, 230, 92)}
+  80% {color: rgb(80, 151, 246) }
+  90% { color:rgb(128, 127, 240) }
+  100%{ color:rgb(244, 204, 197); }
+}
+@-o-keyframes color-change {
+  0% { color:rgb(244, 204, 197); }
+  20%{color:rgb(255, 115, 91);}
+  40%{color:orange;}
+  60%{color:rgb(85, 230, 92)}
+  80% {color: rgb(80, 151, 246) }
+  90% { color:rgb(128, 127, 240) }
+  100%{ color:rgb(244, 204, 197); }
+}
+@keyframes color-change {
+  0% { color:rgb(244, 204, 197); }
+  20%{color:rgb(255, 115, 91);}
+  40%{color:orange;}
+  60%{color:rgb(85, 230, 92)}
+  80% {color: rgb(80, 151, 246) }
+  90% { color:rgb(128, 127, 240) }
+  100%{ color:rgb(244, 204, 197); }
 }
