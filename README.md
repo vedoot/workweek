@@ -6,8 +6,10 @@ A weekly calendar for your work week, built with React.
 3. Add Title, Time, Event Description, Priority(optional)
 
 ### Prioirity 
-- H: High Prioirity
-- L: Low Priority
-- M: Medium Prioirity
-- Gray: Makes event grayscale 
+- H: red
+- L: green
+- M: yellow
+- G: Grayscale 
+- B: blue
+- Party: 🎉
 
