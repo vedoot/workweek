@@ -28,13 +28,16 @@ class Day extends React.Component{
 
       event.preventDefault();
       var eventObj = this.inputNode.value.split(',');
-      if(eventObj.length<3){
+      if(eventObj[3]===undefined){
+        eventObj[3]="regular";
+      }
+      if(eventObj.length<4){
         this.setState({
           alert:true
         })
       }
       else{
-      this.props.handler(this.props.day,{title:eventObj[0].trim(),time:eventObj[1].trim(),description:eventObj[2].trim()});
+      this.props.handler(this.props.day,{title:eventObj[0].trim(),time:eventObj[1].trim(),description:eventObj[2].trim(),type:eventObj[3].trim()});
       this.setState({
         add:false,
         alert:false
@@ -78,7 +81,7 @@ class Day extends React.Component{
     let def ={};
     let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} id={this.props.day} className={"title " + this.props.type}>{this.props.day}</p>;
     if (this.state.add){
-      dayTitle = <form onSubmit={this.handleSubmit}><input autoFocus name="event" ref={this.setWrapperRef} placeholder="Title,Time,Description" id="input" autoComplete="off" type='text'></input></form>
+      dayTitle = <form onSubmit={this.handleSubmit}><input autoFocus name="event" ref={this.setWrapperRef} placeholder="Title,Time,Descr,Priority" id="input" autoComplete="off" type='text'></input></form>
     }
     let alert =null;
     if(this.state.alert){

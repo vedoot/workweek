@@ -4,6 +4,15 @@ html body{
   font-family: "Courier New", Courier, monospace;
 
 }
+#M{
+  color:gold;
+}
+#H{
+  color:rgb(236, 82, 55);
+}
+#L{
+  color:skyblue;
+}
 #upperContainer{
   width: 95%;
   display: flex;
@@ -91,7 +100,7 @@ html body{
   font-size: 15px;
 }
 .eventTime{
-  color: lime;
+  color: lime ;
   font-size: 10px;
   margin-left: 10px;
   padding-left: 10px;
@@ -100,7 +109,7 @@ html body{
   border-left: .1px solid gray;
 }
 .eventDesc{
-  color: lightgray;
+  color: lightgray !important;
   font-size: 13px;
   padding-left: 10px;
   margin-left: 10px;
@@ -124,7 +133,7 @@ html body{
   opacity: .3;
 }
 #gray{
-  color: gray;
+  color: gray !important;
 }
 .today:hover{
   border-bottom: 1.5px solid skyblue;
@@ -149,6 +158,7 @@ html body{
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
+  overflow-x: scroll;
   font-size:10px;
   opacity: 0.5; /* Firefox */
 }
