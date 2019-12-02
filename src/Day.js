@@ -85,7 +85,7 @@ class Day extends React.Component{
       alert = <div id="alert">Read the instructions asshole </div>
     }
     if(event.length === 0){
-      def = {title:"Nothing Today",time:"0:00",description:"Realax",type:"gray"};
+      def = {title:"Nothing Today",time:"0:00",description:"Relax",type:"gray"};
 
       return(
         <div className="day">
