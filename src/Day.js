@@ -109,7 +109,7 @@ class Day extends React.Component{
             <DayContent
               type={e.type}
               title={'['+e.title+']'}
-              time={e.time!=undefined?'['+e.time+']':'[All Day]'}
+              time={e.time!==undefined?'['+e.time+']':'[All Day]'}
               description={e.description} key={i}
               onClick={() =>
                 ( this.setState({
@@ -148,7 +148,7 @@ sortEvents(){
 var changedA = false;
 var changedB =false;
     if(a.time.includes("PM")||!a.time.includes("AM")){
-      if(a.time.substring(0,2)=='12'){
+      if(a.time.substring(0,2)==='12'){
         a.time='00'+a.time.substring(2);
         changedA=true;
       }
@@ -163,7 +163,7 @@ var changedB =false;
       t1 = a.time.substring(0,a.time.length-2);
     }
     if(b.time.includes("PM")||!b.time.includes("AM")){
-      if(b.time.substring(0,2)=='12'){
+      if(b.time.substring(0,2)==='12'){
         b.time='00'+b.time.substring(2);
         changedB=true;
 
