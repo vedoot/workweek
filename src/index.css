@@ -192,6 +192,9 @@ html body{
   font-size: 5%;
   opacity:.5;
 }
+#finished.dayContent:hover{
+  opacity: 1.0 !important;
+}
 .today:hover{
   border-bottom: 1.5px solid skyblue;
 }

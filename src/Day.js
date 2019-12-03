@@ -79,10 +79,10 @@ class Day extends React.Component{
     if(date.includes("PM")){
       if(date.substring(0,2)==='12'){
         date = '12'+date.substring(2);
-        console.log(date);
+        console.log("YER");
       }
       else{
-      var x = parseInt(date.substring(0,2) + 12);
+      var x = parseInt(date.substring(0,2)) + 12;
       date = x + date.substring(2);
     }
     }
@@ -90,7 +90,7 @@ class Day extends React.Component{
     date = date.replace('AM', "");
     date = date.substring(0, date.length - 4);
     date = date.replace(':', "");
-    console.log(date);
+    // console.log(date);
 
     if(this.props.type =="today"){
         for(var elm of this.props.event){
