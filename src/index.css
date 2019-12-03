@@ -8,7 +8,7 @@ html body{
   color:rgb(188, 230, 49);
 }
 #M.eventTitle{
-  color:orange;
+  color:gold;
 }
 #H.eventTime{
   color:rgb(244, 204, 197);
@@ -52,7 +52,7 @@ html body{
     opacity: .4;
     font-family: "Courier New", Courier, monospace;
     margin-top: 4%;
-    font-size: 16px;
+    font-size: 14px;
     /* border: 1px solid lime; */
     height: 0;
 
@@ -67,7 +67,7 @@ html body{
   padding-top:2%;
   margin-bottom:2%;
   font-family: "Courier New", Courier, monospace;
-  font-size: 18px;
+  font-size: 16px;
   color:rgb(237, 135, 117);
   /* border: 1px solid lime; */
 }
