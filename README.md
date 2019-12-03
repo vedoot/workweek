@@ -1,4 +1,4 @@
-#workweek
+# workweek
 A darktheme weekly calendar for your work week, built with React.
 
 ### Instructions
