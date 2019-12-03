@@ -15,7 +15,8 @@ class Week extends React.Component {
         Fri:[],
         Sat: [],
         Sun:[],
-      }
+      },
+      date: new Date()
     }
     this.handler  = this.handler.bind(this);
     // this.sort = this.handler.bind(this);
@@ -24,11 +25,24 @@ componentWillMount(){
   localStorage.getItem('events') && this.setState({
     events:JSON.parse(localStorage.getItem('events'))
   })
+  this.timerID = setInterval(
+    () => this.tick(),
+    1000
+  );
   // chrome.storage.local.get("events", function(value) {
   //   this.setState({
   //     events:JSON.parse(value)
   //     })
     // })
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
   }
 //
 //
