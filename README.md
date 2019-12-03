@@ -1,4 +1,5 @@
-A weekly calendar for your work week, built with React.
+#workweek
+A darktheme weekly calendar for your work week, built with React.
 
 ### Instructions
 1. Visit https://workweek.herokuapp.com/
