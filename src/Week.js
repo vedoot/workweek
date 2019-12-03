@@ -27,7 +27,7 @@ componentWillMount(){
   })
   this.timerID = setInterval(
     () => this.tick(),
-    86400000
+    3600000
   );
   // chrome.storage.local.get("events", function(value) {
   //   this.setState({

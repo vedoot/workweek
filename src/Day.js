@@ -96,8 +96,14 @@ class Day extends React.Component{
         for(var elm of this.props.event){
             var str = elm.time;
             if(str.includes("PM")){
-              var x = parseInt(str.substring(0,2)) + 12;
-              str = x + str.substring(2);
+              if(str.substring(0,2)==='12'){
+                str = '12'+str.substring(2);
+
+              }
+              else{
+                var x = parseInt(str.substring(0,2)) + 12;
+                str = x + str.substring(2);
+              }
             }
             str = str.replace('PM', "") ;
             str = str.replace('AM', "") ;
@@ -106,9 +112,7 @@ class Day extends React.Component{
               elm.type ="finished";
               console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
             }
-            else{
-              elm.type="Regular"
-            }
+            
 
         }
 
