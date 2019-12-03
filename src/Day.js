@@ -23,7 +23,6 @@ class Day extends React.Component{
 
 
   handleSubmit(event){
-
       event.preventDefault();
       var eventObj = this.inputNode.value.split(',');
 
@@ -39,7 +38,7 @@ class Day extends React.Component{
       if(eventObj[2]===undefined){
         eventObj[2]=" ";
       }
-      if(eventObj[1]===undefined){
+      if(eventObj[1]===undefined|| eventObj[1]===' ' || eventObj[1]===''){
         eventObj[1]="00:00AM"
       }
       this.props.handler(this.props.day,{title:eventObj[0].trim(),time:eventObj[1].trim(),description:eventObj[2].trim(),type:eventObj[3].trim().toUpperCase()});
@@ -78,8 +77,14 @@ class Day extends React.Component{
       date = '0'+date;
     }
     if(date.includes("PM")){
-      var x = parseInt(date.substring(0,2)) + 12;
+      if(date.substring(0,2)==='12'){
+        date = '12'+date.substring(2);
+        console.log(date);
+      }
+      else{
+      var x = parseInt(date.substring(0,2) + 12);
       date = x + date.substring(2);
+    }
     }
     date = date.replace('PM', "");
     date = date.replace('AM', "");
@@ -99,15 +104,21 @@ class Day extends React.Component{
             str = str.replace(':','')
             if(parseInt(str)< parseInt(date)){
               elm.type ="finished";
+              console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
             }
+            else{
+              elm.type="Regular"
+            }
+
         }
+
       }
+
   }
 
 
   sortEvents(){
     this.props.event.sort(function(a,b){
-
       a.time.toLowerCase();
       b.time.toLowerCase();
       var t1,t2="";
