@@ -1,8 +1,6 @@
 html body{
-
   background-color: rgb(44,48,58);
   font-family: "Courier New", Courier, monospace;
-
 }
 #M.eventTime{
   color:rgb(188, 230, 49);
@@ -45,21 +43,6 @@ html body{
   justify-content: space-between;
   /* border: 1px solid lime; */
 }
-#today{
-  text-decoration: none;
-    margin-right: 2.5%;
-    color: lime;
-    opacity: .4;
-    font-family: "Courier New", Courier, monospace;
-    margin-top: 4%;
-    font-size: 14px;
-    /* border: 1px solid lime; */
-    height: 0;
-
-}
-#today:hover{
-    color:gray;
-}
 #headline{
   display: flex;
   flex-direction: column;
@@ -78,6 +61,39 @@ html body{
   color: rgb(244, 204, 197);
   margin-right: 15%;
   padding-bottom: 5px;
+}
+#today{
+  text-decoration: none;
+    margin-right: 2.5%;
+    color: lime;
+    opacity: .4;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 4%;
+    font-size: 14px;
+    /* border: 1px solid lime; */
+    height: 0;
+
+}
+#today:hover{
+    color:gray;
+}
+#instructions{
+  font-size: 9px;
+  color: gray;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  margin-right: 3.5%;
+}
+#instructions:hover{
+  color: lightgray;
+}
+#linkContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  /* border: 1px solid lime; */
+  width: 50%;
+  align-items: flex-end;
 }
 #alert{
   font-size: 14px;
@@ -160,24 +176,7 @@ html body{
   padding-top: 1.5%;
 
 }
-#instructions{
-  font-size: 9px;
-  color: gray;
-  text-decoration: none;
-  margin-top: 1.5rem;
-  margin-right: 3.5%;
-}
-#instructions:hover{
-  color: lightgray;
-}
-#linkContainer{
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
-  /* border: 1px solid lime; */
-  width: 50%;
-  align-items: flex-end;
-}
+
 .yesterday{
   /* opacity: .3; */
 }

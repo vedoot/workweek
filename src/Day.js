@@ -27,7 +27,7 @@ class Day extends React.Component{
       event.preventDefault();
       var eventObj = this.inputNode.value.split(',');
 
-      if(eventObj.length<2){
+      if(eventObj.length<1 || eventObj[0]===""){
         this.setState({
           alert:true
         })
@@ -38,6 +38,9 @@ class Day extends React.Component{
         }
       if(eventObj[2]===undefined){
         eventObj[2]=" ";
+      }
+      if(eventObj[1]===undefined){
+        eventObj[1]="00:00AM"
       }
       this.props.handler(this.props.day,{title:eventObj[0].trim(),time:eventObj[1].trim(),description:eventObj[2].trim(),type:eventObj[3].trim().toUpperCase()});
       this.setState({
