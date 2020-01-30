@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Week from './Week';
+import List from './List';
 import Header from './Header';
 
 import * as serviceWorker from './serviceWorker';
@@ -21,7 +22,7 @@ while(true){
   days.push(days.shift());
 }
 
-ReactDOM.render([<Header/>,<Week days={days}/>], document.getElementById('root'));
+ReactDOM.render(<div className="wholeThing"><div><Header/><Week days={days}/></div> <List/></div>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
