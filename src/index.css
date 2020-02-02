@@ -87,20 +87,20 @@ html body{
   margin-right: 15%;
   padding-bottom: 5px;
 }
-.today{
+.todayDate{
   text-decoration: none;
     margin-right: 2.5%;
     color: lime;
-    opacity: .4;
+    opacity: .5;
     font-family: "Courier New", Courier, monospace;
     margin-top: 4%;
     font-size: 14px;
-    /* border: 1px solid lime; */
+
     height: 0;
 
 }
 
-.today:hover{
+.todayDate:hover{
     color:gray;
 }
 .instructions{

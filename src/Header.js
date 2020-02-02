@@ -32,7 +32,7 @@ class Header extends React.Component{
         <p className="tagline"> Better get to work</p>
       </div>
       <div className="linkContainer">
-        <a target="_blank" rel="noopener noreferrer" href="http://calendar.google.com/" className="today"> {this.state.date.toString()}</a>
+        <a target="_blank" rel="noopener noreferrer" href="http://calendar.google.com/" className="todayDate"> {this.state.date.toString()}</a>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/VMehta99/workweek" className="instructions">Some Instructions</a>
        </div>
     </div>
