@@ -46,7 +46,7 @@ html body{
 }
 .HI.dayContent{
   background-color:  rgba(255, 255, 255, 0.020);
-  padding: 1rem;
+  padding: .6rem;
 }
 .HI.dayContent:hover{
   opacity: 1;
@@ -214,13 +214,21 @@ html body{
 .G{
   color: gray !important;
 }
-.finished{
+.finished{  
+  font-size: 5%;
+}
+.finished.dayContent{
   /* color: orange !important; */
   font-size: 5%;
   opacity:.7;
+  padding: 0 !important;
+  background-color: transparent !important;
+  padding-top: 10px;
 }
 .finished.dayContent:hover{
   opacity: 1.0 !important;
+  background-color: transparent !important;
+
 }
 .today:hover{
   border-bottom: 1.5px solid skyblue;
