@@ -11,6 +11,11 @@ A darktheme weekly calendar for your work week, built with React.
 - H: red
 - L: green
 - M: yellow
-- G: Grayscale
+- G: grayscale
 - B: blue
+- HI: highlights the event
 - Party: 🎉
+
+### Mixing Priority 
+- All priority tags can be mixed with 'HI'.
+`Title, Time, Description, B HI`
