@@ -29,12 +29,9 @@ componentWillMount(){
     () => this.tick(),
     3600000
   );
-  // chrome.storage.local.get("events", function(value) {
-  //   this.setState({
-  //     events:JSON.parse(value)
-  //     })
-    // })
   }
+  
+
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
@@ -75,14 +72,6 @@ handleClick(day,i) {
 
 
   render(){
-   //  chrome.storage.local.set({
-   //   eventList: this.props.event.map(e => ({
-   //     title: e.title,
-   //     time: e.time,
-   //     description: e.description,
-   //     day: this.props.day
-   //   }))
-   // });
     for(var elm of this.props.days){
       if(elm.type === "yesterday"){
         console.log(elm);
@@ -91,7 +80,7 @@ handleClick(day,i) {
     }
    return (
 
-      <div key = {1} id="week">
+      <div key = {1} className="week">
         {this.props.days.map((d, i) => <Day  handleClick={this.handleClick.bind(this)} handler={this.handler} {...d} event={this.state.events[d.day]} key={i}/>)}
       </div>
     )
