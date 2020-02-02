@@ -13,6 +13,7 @@ class Day extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.sortEvents = this.sortEvents.bind(this);
+    this.resetShit = this.resetShit.bind(this);
   }
 
   renderInput(){
@@ -108,15 +109,18 @@ class Day extends React.Component{
             str = str.replace('PM', "") ;
             str = str.replace('AM', "") ;
             str = str.replace(':','')
+            //Where the finished thing is.
             if(parseInt(str)< parseInt(date)){
-              elm.type ="finished";
+              elm.type =elm.type + " finished";
               console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
             }
+          
             
 
         }
 
       }
+
 
   }
 
@@ -182,21 +186,29 @@ class Day extends React.Component{
       return x.getTime() - y.getTime()
     });
   }
-
+  resetShit(){
+   if(this.props.type==="yesterday"){
+     for(var elm of this.props.event){
+       elm.type = elm.type.replace("finished", "");
+     }
+   }
+  }
 
   render(){
+    console.log(this.props);
     this.sortEvents();
     this.setGray();
+    this.resetShit();
     let event = this.props.event;
 
     let def ={};
-    let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} id={this.props.day} className={"title " + this.props.type}>{this.props.day}</p>;
+    let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} className={"title " + this.props.type + this.props.day}>{this.props.day}</p>;
     if (this.state.add){
-      dayTitle = <form onSubmit={this.handleSubmit}><input autoFocus name="event" ref={this.setWrapperRef} placeholder="Title,Time,Descr,Priority" id="input" autoComplete="off" type='text'></input></form>
+      dayTitle = <form onSubmit={this.handleSubmit}><input autoFocus name="event" ref={this.setWrapperRef} placeholder="Title,Time,Descr,Priority" className="input" autoComplete="off" type='text'></input></form>
     }
     let alert =null;
     if(this.state.alert){
-      alert = <div id="alert">Read the instructions <br/>dummy</div>
+      alert = <div className="alert">Read the instructions <br/>dummy</div>
     }
     if(event.length === 0){
       def = {title:"Nothing Today",time:"0:00",description:"Relax",type:"gray"};
