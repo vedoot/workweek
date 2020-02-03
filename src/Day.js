@@ -87,6 +87,17 @@ class Day extends React.Component{
       date = x + date.substring(2);
     }
     }
+    if(date.includes("AM")){
+      if(date.substring(0,2)==='12'){
+        date = '00'+date.substring(2);
+        // console.log("YER");
+      }
+    //   else{
+    //   var x = parseInt(date.substring(0,2)) - 12;
+    //   date = x + date.substring(2);
+    // }
+    }
+
     date = date.replace('PM', "");
     date = date.replace('AM', "");
     date = date.substring(0, date.length - 4);
@@ -106,12 +117,26 @@ class Day extends React.Component{
                 str = x + str.substring(2);
               }
             }
+            if(str.includes("AM")){
+              if(str.substring(0,2)==='12'){
+                str = '00'+str.substring(2);
+
+              }
+              // else{
+              //   var x = parseInt(str.substring(0,2)) + 12;
+              //   str = x + str.substring(2);
+              // }
+            }
+        
             str = str.replace('PM', "") ;
             str = str.replace('AM', "") ;
             str = str.replace(':','')
             if(parseInt(str)< parseInt(date)){
               elm.type =elm.type + " finished";
-              // console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
+              console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
+            }
+            else{
+              elm.type = elm.type.replace("finished", "");
             }
           
             
@@ -201,7 +226,7 @@ class Day extends React.Component{
     let event = this.props.event;
 
     let def ={};
-    let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} className={"title " + this.props.type + this.props.day}>{this.props.day}</p>;
+    let dayTitle = <p onClick={()=> this.props.sort(this.props.day),this.renderInput} className={"title " + this.props.type + this.props.day}>{this.props.day}<p className="date">{this.props.date> 9 ? "" + this.props.date: "0" + this.props.date}</p></p>;
     if (this.state.add){
       dayTitle = <form onSubmit={this.handleSubmit}><input autoFocus name="event" ref={this.setWrapperRef} placeholder="Title,Time,Descr,Priority" className="input" autoComplete="off" type='text'></input></form>
     }
@@ -221,7 +246,6 @@ class Day extends React.Component{
       )
 
     }
-
     return (
       <div className="day">
         {dayTitle}

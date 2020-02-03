@@ -75,10 +75,10 @@ handleClick(day,i) {
         elm = [];
       }
     }
-   return (
 
+   return (
       <div key = {1} className="week">
-        {this.props.days.map((d, i) => <Day  handleClick={this.handleClick.bind(this)} handler={this.handler} {...d} event={this.state.events[d.day]} key={i}/>)}
+        {this.props.days.map((d, i) => <Day date={i+ new Date().getDate()} handleClick={this.handleClick.bind(this)} handler={this.handler} {...d} event={this.state.events[d.day]} key={i}/>)}
       </div>
     )
   };

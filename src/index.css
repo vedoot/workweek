@@ -166,8 +166,23 @@ html body{
   width: 90%;
 }
 .title{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space; */
+  /* align-items: baseline; */
+  align-self: flex-end;
   border-bottom: .1px solid rgb(72, 73, 77);
   margin-right: 15%;
+  color: white;
+}
+.date{
+  align-self: flex-end;
+  color: rgba(211, 211, 211, 0.266);
+  font-size: 10px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.date:hover{
   color: white;
 }
 .title:hover{
@@ -186,6 +201,7 @@ html body{
   /* background-color: pink; */
 }
 .eventTitle{
+  text-transform: capitalize;
   color: orange;
   font-size: 15px;
 }
@@ -222,12 +238,20 @@ html body{
   font-size: 5% !important;
   border:0 !important;
 }
+.finished.eventTime{
+  border-left: .1px solid gray !important;
+}
+.finished.eventDesc{
+  border-left: .1px solid gray !important;
+}
 .finished.dayContent{
   /* color: orange !important; */
   opacity:.7 !important;
   padding: 0 !important;
   background-color: transparent !important;
   padding-top: 10px !important;
+  margin-left: 0;
+
 }
 .finished.dayContent:hover{
   opacity: 1.0 !important;
