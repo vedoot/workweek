@@ -277,7 +277,7 @@ html body{
   align-items: center;
   padding-bottom: 1%;
   padding-top: 1%;
-  background-color: rgb(41, 43, 49);
+  background-color: rgba(41, 43, 49, 0.349);
   /* border: 1px solid red; */
 
 
@@ -290,27 +290,29 @@ html body{
   /* padding-bottom: 5px; */
   color: white;
   border:0;
-  border-bottom: .1px solid rgb(72, 73, 77);
+  border-bottom: .1px solid rgb(108, 110, 116);
   /* border-top:.1px solid skyblue; */
   outline-color: rgb(44,48,58);;
-  background-color: rgb(41, 43, 49);
+  background-color:transparent;
   text-align:right;
   outline: none;
 
   /* margin-right: 15%; */
-
-
+}
+.taskInput::placeholder{
+  color: lightgray;
+  opacity: 1;
 }
 .task{
   margin-right: 2rem;
   font-size: 12px;
   text-transform: capitalize;
   padding: 2px;
-  color: rgba(255, 255, 255, 0.61);
+  color: lightgray;
   cursor: pointer;
 }
 .task:hover{
-  color:gray !important;
+  opacity:.2;
 }
 .taskContainer{
   display: flex;

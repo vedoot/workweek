@@ -1,0 +1,89 @@
+{
+    "Mon": [{
+        "title": "Tea",
+        "time": "07:00AM",
+        "description": "yum yum",
+        "type": "L"
+    }, {
+        "title": "Class",
+        "time": "08:40AM",
+        "description": "SEC-118 ends @ 10",
+        "type": "HI"
+    }, {
+        "title": "Recitation",
+        "time": "10:35AM",
+        "description": "SEC-203 ends @ 11:30",
+        "type": "HI M"
+    }, {
+        "title": "Class",
+        "time": "01:40PM",
+        "description": "HLL-114 ends @ 3",
+        "type": "HI"
+    }, {
+        "title": "Meeting with Kid",
+        "time": "07:30PM",
+        "description": "Talk about FC bugs/fixes",
+        "type": "H"
+    }, {
+        "title": "Gym",
+        "time": "7:30AM",
+        "description": "dont be a lazy boi",
+        "type": "M"
+    }],
+    "Tue": [{
+        "title": "Class",
+        "time": "12:00PM",
+        "description": "TIL-264 ends @ 1:20",
+        "type": "HI"
+    }, {
+        "title": "Grab Lunch",
+        "time": "01:30PM",
+        "description": "",
+        "type": "B"
+    }, {
+        "title": "Recitation",
+        "time": "01:55PM",
+        "description": "BE-250 ends @ 2:50",
+        "type": "HI M"
+    }, {
+        "title": "Free Space",
+        "time": "03:00PM",
+        "description": "",
+        "type": "B"
+    }, {
+        "title": "Class",
+        "time": "04:30PM",
+        "description": "VD-211 ends @ 5:50",
+        "type": "HI"
+    }],
+    "Wed": [{
+        "title": "Recitation",
+        "time": "10:35AM",
+        "description": "SEC-210 ends @ 11:30",
+        "type": "HI M"
+    }, {
+        "title": "Class",
+        "time": "01:40PM",
+        "description": "HLL-114 ends @ 3",
+        "type": "HI"
+    }],
+    "Thur": [{
+        "title": "Class",
+        "time": "08:40AM",
+        "description": "SEC-118 ends @ 10",
+        "type": "HI"
+    }, {
+        "title": "Class",
+        "time": "04:30PM",
+        "description": "VD-211 ends @ 5:50",
+        "type": "HI"
+    }],
+    "Fri": [],
+    "Sat": [{
+        "title": "Gym Physical",
+        "time": "10:00AM",
+        "description": "Get it done!",
+        "type": "H HI"
+    }],
+    "Sun": []
+}
