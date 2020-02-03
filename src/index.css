@@ -39,18 +39,33 @@ html body{
 }
 .B{color: rgb(125, 179, 248);}
 .B.eventTitle{
-  color: rgb(80, 151, 246)
+  color: rgb(99, 164, 250)
 }
 .B.eventTime{
-  color:rgb(128, 127, 240);
+  color:rgb(140, 139, 231);
+  opacity: 1 !important;
 }
-.HI.dayContent{
-  background-color:  rgba(255, 255, 255, 0.020);
-  padding: .6rem;
+.HI.eventTitle{
+  background-color: rgba(255, 230, 0, 0.05);
+  border: .1px solid rgba(255, 217, 0, 0.308);
+  width: inherit;
 }
-.HI.dayContent:hover{
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.010);
+
+.HI.H.dayContent{
+  background-color: rgba(248, 6, 6, 0.04);
+  border: .1px solid rgba(255, 0, 0, 0.2);
+  padding-bottom: 10px !important;
+}
+.HI.H.eventTitle{
+  background-color: transparent;
+  border-color: transparent;
+}
+.HI.L.eventTitle{
+  background-color: rgba(25, 99, 15, 0.178);
+  border: 1px solid rgba(0, 255, 0, 0.315)
+}
+.BO.dayContent{
+  font-weight: bold;
 }
 .PARTY{
   -webkit-animation: color-change 7s infinite;
@@ -155,7 +170,7 @@ html body{
   border-bottom: 1.5px solid orange;
 }
 .dayContent{
-  /* padding-left: 10px; */
+  padding-left: 10px;
   width: 90%;
   padding-top: 10px;
   margin-bottom: 10px;
