@@ -15,34 +15,34 @@ html body{
   /* border:1px solid lime; */
   
 }
-.M{ color:rgb(188, 230, 49);}
+.M{ color:rgb(188, 230, 49) !important; }
 .M.eventTime{
-  color:rgb(188, 230, 49);
+  color:rgb(188, 230, 49) !important;
 }
 .M.eventTitle{
-  color:gold;
+  color:gold !important;
 }
-.H{color:rgb(247, 147, 130);}
+.H{color:rgb(247, 147, 130) !important;}
 .H.eventTime{
-  color:rgb(244, 204, 197);
+  color:rgb(244, 204, 197) !important;
   /* font-weight: 700; */
 }
 .H.eventTitle{
- color:rgb(255, 115, 91);
+ color:rgb(255, 115, 91) !important;
 }
 .L.eventTime{
-  color:lightgreen;
+  color:lightgreen !important;
 }
-.L{color:lightgreen;}
+.L{color:lightgreen !important;}
 .L.eventTitle{
-  color:rgb(85, 230, 92);
+  color:rgb(85, 230, 92) !important;
 }
-.B{color: rgb(125, 179, 248);}
+.B{color: rgb(125, 179, 248) !important;}
 .B.eventTitle{
-  color: rgb(99, 164, 250)
+  color: rgb(99, 164, 250) !important;
 }
 .B.eventTime{
-  color:rgb(140, 139, 231);
+  color:rgb(140, 139, 231) !important;
   opacity: 1 !important;
 }
 .HI{
@@ -54,7 +54,14 @@ html body{
   padding-bottom: 10px;
   width: inherit;
 }
-
+.task.HI{
+  background-color:rgba(255, 255, 255, 0.15);
+  padding-left: .5em;
+  padding-right: .5em;
+}
+.task.H.HI{
+  background-color: rgba(248, 6, 6, 0.2);
+}
 .HI.H.dayContent{
   background-color: rgba(248, 6, 6, 0.04);
   border: .1px solid rgba(255, 0, 0, 0.1);
@@ -201,23 +208,7 @@ html body{
   border-left: .1px solid gray;
   width: calc(100% - 2rem);
 }
-/* .footer{
-  position: absolute;
-  bottom: 0;
-  font-size: 10px;
-  background-color:rgb(33, 33, 32);
-  color: gray;
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: .5%;
-  padding-top: 1.5%;
 
-} */
-
-.yesterday{
-  /* opacity: .3; */
-}
 
 .gray{
   color: gray !important;
@@ -228,6 +219,7 @@ html body{
 }
 .finished{  
   font-size: 5% !important;
+  border:0 !important;
 }
 .finished.dayContent{
   /* color: orange !important; */
@@ -284,20 +276,14 @@ html body{
 }
 .taskInput{
   width: inherit;
-  /* background-color: rgb(44,48,58); */
   font-family: "Courier New", Courier, monospace;
-  /* padding-top: .5rem; */
-  /* padding-bottom: 5px; */
   color: white;
   border:0;
   border-bottom: .1px solid rgb(108, 110, 116);
-  /* border-top:.1px solid skyblue; */
   outline-color: rgb(44,48,58);;
   background-color:transparent;
   text-align:right;
   outline: none;
-
-  /* margin-right: 15%; */
 }
 .taskInput::placeholder{
   color: lightgray;
