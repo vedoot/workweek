@@ -45,9 +45,6 @@ componentWillMount(){
 //
 componentWillUpdate(nextProps,nextState){
   localStorage.setItem('events',JSON.stringify(this.state.events));
-  // chrome.storage.local.set({
-  //    events: JSON.stringify(this.state.events)
-  //  });
 }
 //
 // componentDidMount(){

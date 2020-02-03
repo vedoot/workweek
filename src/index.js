@@ -15,7 +15,7 @@ while(true){
 
   const elm = days[0];
   if (elm.dayCode === date.getDay()){
-     elm.type="today";
+     elm.type="today ";
      yd.type = "yesterday";
      break;
    }

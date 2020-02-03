@@ -224,11 +224,10 @@ html body{
 }
 .finished.dayContent{
   /* color: orange !important; */
-  font-size: 5%;
-  opacity:.7;
+  opacity:.7 !important;
   padding: 0 !important;
   background-color: transparent !important;
-  padding-top: 10px;
+  padding-top: 10px !important;
 }
 .finished.dayContent:hover{
   opacity: 1.0 !important;

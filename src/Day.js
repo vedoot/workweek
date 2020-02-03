@@ -80,7 +80,7 @@ class Day extends React.Component{
     if(date.includes("PM")){
       if(date.substring(0,2)==='12'){
         date = '12'+date.substring(2);
-        console.log("YER");
+        // console.log("YER");
       }
       else{
       var x = parseInt(date.substring(0,2)) + 12;
@@ -93,7 +93,7 @@ class Day extends React.Component{
     date = date.replace(':', "");
     // console.log(date);
 
-    if(this.props.type =="today"){
+    if(this.props.type ==="today "){
         for(var elm of this.props.event){
             var str = elm.time;
             if(str.includes("PM")){
@@ -109,10 +109,9 @@ class Day extends React.Component{
             str = str.replace('PM', "") ;
             str = str.replace('AM', "") ;
             str = str.replace(':','')
-            //Where the finished thing is.
             if(parseInt(str)< parseInt(date)){
               elm.type =elm.type + " finished";
-              console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
+              // console.log("STR: "+ parseInt(str) + " Date:"+parseInt(date));
             }
           
             
@@ -132,7 +131,6 @@ class Day extends React.Component{
       var t1,t2="";
       if(a.time.charAt(1)===':'){
         a.time = '0'+a.time;
-        console.log("yes");
       }
       if(b.time.charAt(1)===':'){
         b.time = '0'+b.time;
@@ -190,12 +188,13 @@ class Day extends React.Component{
    if(this.props.type==="yesterday"){
      for(var elm of this.props.event){
        elm.type = elm.type.replace("finished", "");
+
      }
    }
   }
 
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     this.sortEvents();
     this.setGray();
     this.resetShit();

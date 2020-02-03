@@ -12,7 +12,7 @@ class List extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addTask  = this.addTask.bind(this);
         this.setWrapperRef = this.setWrapperRef.bind(this);
-    // For each elm of tasks[], render <Task/>
+ 
       }
     componentWillMount(){
         localStorage.getItem('tasks') && this.setState({
@@ -23,8 +23,6 @@ class List extends React.Component{
         localStorage.setItem('tasks',JSON.stringify(this.state.tasks));
       }
 
-    // resetForm = () => { 
-    // }
     handleSubmit(task){
         task.preventDefault();
         var taskObj = this.inputNode.value.split(',');
@@ -46,10 +44,10 @@ class List extends React.Component{
     }
 
     deleteTask(i) {
-    this.setState(function(state){
-        state.tasks.splice(i,1);
-        return state;
-    })
+        this.setState(function(state){
+            state.tasks.splice(i,1);
+            return state;
+        })
     }
 
       render(){
@@ -62,8 +60,7 @@ class List extends React.Component{
                         )
                     }
                        
-                </div>
-                
+                </div>  
                 <form id="datForm" onSubmit={this.handleSubmit}><input ref={this.setWrapperRef} placeholder ="ToDo" className="taskInput" autoComplete="off" type='text'></input></form>
 
             </div>
