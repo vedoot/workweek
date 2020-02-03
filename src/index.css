@@ -52,6 +52,8 @@ html body{
   font-size: 10px;
   background-color:rgba(255, 255, 255, 0.02);
   padding-bottom: 10px;
+  padding-left: 10px;
+  margin-left: -10px;
   width: inherit;
 }
 .task.HI{
@@ -173,7 +175,6 @@ html body{
   border-bottom: 1.5px solid orange;
 }
 .dayContent{
-  padding-left: 10px;
   width: 90%;
   padding-top: 10px;
   margin-bottom: 10px;
