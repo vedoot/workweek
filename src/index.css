@@ -45,24 +45,20 @@ html body{
   color:rgb(140, 139, 231);
   opacity: 1 !important;
 }
-.HI.eventTitle{
-  background-color: rgba(255, 230, 0, 0.05);
-  border: .1px solid rgba(255, 217, 0, 0.308);
+.HI{
+  font-size: 85% !important;
+}
+.HI.dayContent{
+  font-size: 10px;
+  background-color:rgba(255, 255, 255, 0.02);
+  padding-bottom: 10px;
   width: inherit;
 }
 
 .HI.H.dayContent{
   background-color: rgba(248, 6, 6, 0.04);
-  border: .1px solid rgba(255, 0, 0, 0.2);
+  border: .1px solid rgba(255, 0, 0, 0.1);
   padding-bottom: 10px !important;
-}
-.HI.H.eventTitle{
-  background-color: transparent;
-  border-color: transparent;
-}
-.HI.L.eventTitle{
-  background-color: rgba(25, 99, 15, 0.178);
-  border: 1px solid rgba(0, 255, 0, 0.315)
 }
 .BO.dayContent{
   font-weight: bold;
@@ -203,6 +199,7 @@ html body{
   padding-left: 10px;
   margin-left: 10px;
   border-left: .1px solid gray;
+  width: calc(100% - 2rem);
 }
 /* .footer{
   position: absolute;
@@ -230,7 +227,7 @@ html body{
   color: gray !important;
 }
 .finished{  
-  font-size: 5%;
+  font-size: 5% !important;
 }
 .finished.dayContent{
   /* color: orange !important; */
