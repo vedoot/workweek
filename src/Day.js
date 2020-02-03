@@ -80,7 +80,6 @@ class Day extends React.Component{
     if(date.includes("PM")){
       if(date.substring(0,2)==='12'){
         date = '12'+date.substring(2);
-        // console.log("YER");
       }
       else{
       var x = parseInt(date.substring(0,2)) + 12;
@@ -90,12 +89,7 @@ class Day extends React.Component{
     if(date.includes("AM")){
       if(date.substring(0,2)==='12'){
         date = '00'+date.substring(2);
-        // console.log("YER");
       }
-    //   else{
-    //   var x = parseInt(date.substring(0,2)) - 12;
-    //   date = x + date.substring(2);
-    // }
     }
 
     date = date.replace('PM', "");

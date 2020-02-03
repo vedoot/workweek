@@ -293,7 +293,7 @@ html body{
   align-items: center;
   padding-bottom: 1%;
   padding-top: 1%;
-  background-color: rgba(41, 43, 49, 0.349);
+  background-color: rgba(42, 46, 54);
   /* border: 1px solid red; */
 
 
@@ -304,7 +304,7 @@ html body{
   color: white;
   border:0;
   border-bottom: .1px solid rgb(108, 110, 116);
-  outline-color: rgb(44,48,58);;
+  outline-color: rgb(44,48,58);
   background-color:transparent;
   text-align:right;
   outline: none;
