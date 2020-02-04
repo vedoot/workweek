@@ -5,6 +5,11 @@
         "description": "yum yum",
         "type": "L"
     }, {
+        "title": "Gym",
+        "time": "07:30AM",
+        "description": "dont be a lazy boi",
+        "type": "M"
+    }, {
         "title": "Class",
         "time": "08:40AM",
         "description": "SEC-118 ends @ 10",
@@ -24,11 +29,6 @@
         "time": "07:30PM",
         "description": "Talk about FC bugs/fixes",
         "type": "H"
-    }, {
-        "title": "Gym",
-        "time": "7:30AM",
-        "description": "dont be a lazy boi",
-        "type": "M"
     }],
     "Tue": [{
         "title": "Class",

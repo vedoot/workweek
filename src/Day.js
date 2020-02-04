@@ -206,7 +206,7 @@ class Day extends React.Component{
   resetShit(){
    if(this.props.type==="yesterday"){
      for(var elm of this.props.event){
-       elm.type = elm.type.replace("finished", "");
+       elm.type = elm.type.replace(/finished/g, "");
 
      }
    }

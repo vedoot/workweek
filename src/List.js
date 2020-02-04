@@ -10,7 +10,7 @@ class List extends React.Component{
         }
         this.deleteTask  = this.deleteTask.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.addTask  = this.addTask.bind(this);
+        // this.addTask  = this.addTask.bind(this);
         this.setWrapperRef = this.setWrapperRef.bind(this);
  
       }
@@ -32,16 +32,20 @@ class List extends React.Component{
                 console.log(state);
                 return state;
             })
+            if (this.inputNode.current) {
+                this.inputNode.current.value = "Peanut";
+            }
 
     } 
     setWrapperRef(node) {
         this.inputNode = node;
     }
-    addTask(){
-        this.setState(function(state){
-            return state;
-        })
-    }
+    // addTask(){
+    //     this.setState(function(state){
+    //         return state;
+    //     })
+        
+    // }
 
     deleteTask(i) {
         this.setState(function(state){
@@ -61,7 +65,10 @@ class List extends React.Component{
                     }
                        
                 </div>  
-                <form id="datForm" onSubmit={this.handleSubmit}><input ref={this.setWrapperRef} placeholder ="ToDo" className="taskInput" autoComplete="off" type='text'></input></form>
+                <form id="datForm" onSubmit={this.handleSubmit}>
+                    <input ref={this.setWrapperRef} placeholder ="ToDo" className="taskInput" autoComplete="off" type='text'>
+                        </input>
+                        </form>
 
             </div>
          )
