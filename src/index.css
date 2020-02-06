@@ -235,8 +235,10 @@ html body{
   color: gray !important;
 }
 .finished{  
-  font-size: 5% !important;
+  font-size: .545rem !important;
   border:0 !important;
+  /* border: 1px solid lime !important; */
+
 }
 .finished.eventTime{
   border-left: .1px solid gray !important;
