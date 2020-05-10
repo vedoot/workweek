@@ -7,7 +7,6 @@ function DayContent(props){
       <div  className={"eventTitle " + props.type}>{props.title}</div>
       <div   className={"eventTime "+ props.type}>{props.time}</div>
       <div  className={"eventDesc "+ props.type}>{props.description}</div>
-
     </div>
   )
 }

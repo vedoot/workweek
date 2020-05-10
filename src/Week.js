@@ -27,7 +27,7 @@ componentWillMount(){
   })
   this.timerID = setInterval(
     () => this.tick(),
-    3600000
+    1000
   );
   }
   
